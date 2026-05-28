@@ -66,7 +66,6 @@ function App() {
           <Reveal>
             <Contact />
           </Reveal>
-
           <Footer />
         </div>
       )}

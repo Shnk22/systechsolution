@@ -36,6 +36,21 @@ function Contact() {
       alert("Something went wrong.");
       console.error(error);
     } else {
+      await fetch("/api/contact", {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.message,
+        }),
+      });
       setSuccess("Message submitted successfully!");
 
       setFormData({
